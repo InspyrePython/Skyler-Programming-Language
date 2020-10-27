@@ -1,0 +1,27 @@
+_regedit:
+	bit_size,32
+	word_size,64
+start:
+	bin "Enter a number: ",a
+	bin "Enter another number: ",b
+	win "Enter a operation: ",c
+	je c,+,a
+	je c,-,s
+	je c,x,m
+	je c,/,d
+a:
+	add d,a,b
+	msg d
+	end
+s:
+	sub d,a,b
+	msg d
+	end
+m:
+	mul d,a,b
+	msg d
+	end
+d:
+	div d,a,b
+	msg d
+	end
